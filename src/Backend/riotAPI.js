@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "RGAPI-efbfa2bb-1335-4db1-afbe-59c1d040b8f7";
+const API_KEY = "YOMAMA";
 
 export async function getPlayerData(searchProfile) {
   try {
