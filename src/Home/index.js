@@ -22,8 +22,7 @@ export default function LoLSearch() {
   return (
     <div
       className="container-fluid home"
-      style={{ backgroundImage: `url('images/bloodmoon.jpg')` }}
-    >
+      style={{ backgroundImage: `url('images/bloodmoon.jpg')` }}>
       <div className="container-lg">
         <h1>LOL PROFILE CARD SEARCH</h1>
         <form onSubmit={playerSearch}>
