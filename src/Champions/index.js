@@ -3,11 +3,14 @@ import "./styles.scss";
 
 export default function ChampionList() {
   const [champions, setChampions] = useState([]);
-  const iconURL = 'https://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/';
-  const championWiki = 'https://www.leagueoflegends.com/en-us/champions/';
+  const iconURL =
+    "https://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/";
+  const championWiki = "https://www.leagueoflegends.com/en-us/champions/";
 
   useEffect(() => {
-    fetch("https://ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json")
+    fetch(
+      "https://ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json"
+    )
       .then((response) => response.json())
       .then((data) => {
         setChampions(Object.values(data.data));
@@ -19,7 +22,9 @@ export default function ChampionList() {
 
   return (
     <div className="container-fluid champions">
-      <h1>Champion List</h1>
+      <h1 style={{ backgroundImage: `url('images/bloodmoon.jpg')` }}>
+        Champion List
+      </h1>
       <div className="container-grid">
         {champions.map((champion) => {
           const champIcon = iconURL + champion.image.full;
@@ -28,7 +33,7 @@ export default function ChampionList() {
             <div key={champion.id}>
               <h2>{champion.name}</h2>
               <a href={iconHREF}>
-                <img src={champIcon} alt={champion.name}/>
+                <img src={champIcon} alt={champion.name} />
               </a>
               <p>{champion.title}</p>
             </div>
@@ -38,4 +43,3 @@ export default function ChampionList() {
     </div>
   );
 }
-

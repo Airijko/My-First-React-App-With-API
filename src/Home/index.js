@@ -20,50 +20,53 @@ export default function LoLSearch() {
   }
 
   return (
-      <div className="container-fluid home">
-        <div className="container-lg">
-          <h1>LOL PROFILE CARD SEARCH</h1>
-          <form onSubmit={playerSearch}>
+    <div
+      className="container-fluid home"
+      style={{ backgroundImage: `url('images/bloodmoon.jpg')` }}
+    >
+      <div className="container-lg">
+        <h1>LOL PROFILE CARD SEARCH</h1>
+        <form onSubmit={playerSearch}>
           <div className="input-group">
             <input
-                className="form-control"
-                type="search"
-                placeholder="Search"
-                onChange={(e) => setSearchProfile(e.target.value)}
-              />
-              <button
-                className="btn btn-outline-light"
-                type="submit"
-                id="logobutton"
-              >
-                <img src="images/logo.png" alt="logo" id="logo" />
-              </button>
-            </div>
-          </form>
-          <div className="data">
-            {searchSuccess ? (
-              JSON.stringify(playerData) !== "{}" ? (
-                <>
-                  <h3>{playerData.name}</h3>
-                  <img
-                    width="150"
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.6.1/img/profileicon/${playerData.profileIconId}.png`}
-                    alt="icon"
-                  />
-                  <p>Summoner Level - {playerData.summonerLevel}</p>
-                </>
-              ) : (
-                <>
-                  <p>Search for a Player</p>
-                </>
-              )
+              className="form-control"
+              type="search"
+              placeholder="Search"
+              onChange={(e) => setSearchProfile(e.target.value)}
+            />
+            <button
+              className="btn btn-outline-light"
+              type="submit"
+              id="logobutton"
+            >
+              <img src="images/logo.png" alt="logo" id="logo" />
+            </button>
+          </div>
+        </form>
+        <div className="data">
+          {searchSuccess ? (
+            JSON.stringify(playerData) !== "{}" ? (
+              <>
+                <h3>{playerData.name}</h3>
+                <img
+                  width="150"
+                  src={`http://ddragon.leagueoflegends.com/cdn/13.6.1/img/profileicon/${playerData.profileIconId}.png`}
+                  alt="icon"
+                />
+                <p>Summoner Level - {playerData.summonerLevel}</p>
+              </>
             ) : (
               <>
-                <p>No Player Data</p>
+                <p>Search for a Player</p>
               </>
-            )}
-          </div>
+            )
+          ) : (
+            <>
+              <p>No Player Data</p>
+            </>
+          )}
         </div>
       </div>
+    </div>
   );
 }
