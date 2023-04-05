@@ -1,34 +1,33 @@
 .container-fluid.home {
-    background-image: url("../images/bloodmoon.jpg");
-    background-size: cover;
-    height: 100vh;
+  background-size: cover;
+  height: 100vh;
 
-    h1 {
-      font-weight: bold;
-      color: white;
-      text-shadow: 0 0 10px black;
+  h1 {
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px black;
+  }
+
+  form {
+    width: 70%;
+
+    .input-group {
+      height: 45px;
+      width: 100%;
     }
 
-    form {
-      width: 70%;
-
-      .input-group {
-        height: 45px;
-        width: 100%;
-      }
-      
-      .btn {
-        border-left: rgb(196, 196, 196) solid 1px;
-      }
+    .btn {
+      border-left: rgb(196, 196, 196) solid 1px;
     }
+  }
 
-    .container-lg {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+  .container-lg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   .data {
     display: flex;
@@ -43,7 +42,8 @@
     padding: 10px;
   }
 
-  .data h3, .data p {
+  .data h3,
+  .data p {
     color: white;
   }
 }

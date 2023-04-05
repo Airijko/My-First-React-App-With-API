@@ -1,5 +1,5 @@
 import "./global.scss";
-import Home from "./Home"
+import Home from "./Home";
 
 function Navbar(yomama) {
   const { currentComponent } = yomama;
@@ -62,7 +62,9 @@ function Navbar(yomama) {
               </div>
             </form>
           )}
-          <a class="login-btn btn btn-outline-light btn-danger" href="/Login">Login</a>
+          <a class="login-btn btn btn-outline-light btn-danger" href="/Login">
+            Login
+          </a>
         </div>
       </div>
     </nav>
